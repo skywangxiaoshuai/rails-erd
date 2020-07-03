@@ -43,7 +43,7 @@ module RailsERD
 
       # The name of the attribute, equal to the column name.
       def name
-        column.name + "(#{column.comment.to_s.encoding})"
+        column.name + "(#{column.comment.to_s.force_encoding('UTF-8')})"
       end
 
       # The type of the attribute, equal to the Rails migration type. Can be any
